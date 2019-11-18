@@ -4,11 +4,11 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-  "build": "webpack --mode development",
-   "start": "npm run build; webpack-dev-server --open --mode development",
-   "lint": "eslint src/*.js",
-   "test": "jest",
-   "debug": "node --inspect node_modules/.bin/jest --runInBand"
+    "build": "webpack --mode development",
+    "start": "npm run build; webpack-dev-server --open --mode development",
+    "lint": "eslint src/*.js",
+    "test": "jest",
+    "debug": "node --inspect node_modules/.bin/jest --runInBand"
   },
   "keywords": [],
   "author": "",
