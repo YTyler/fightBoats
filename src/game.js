@@ -16,13 +16,25 @@ export class Game {
   }
   placeBoats(){ //put boats onto grid
     this.boats.forEach((boat) => {
-      let coord = [Math.floor(Math.random() * 9) , Math.floor(Math.random() * 9)]
+      let coord = [Math.floor(Math.random() * 9) , Math.floor(Math.random() * 9)];
       boat.coordinates.push(coord);
 
-      // for (let i = 0; i < boat.size-1; i++) {
-      //
-      // }
-    })
+      this.grid[coord[0]][coord[1]] = "X";
+      // Future "No-Duplicate" coordinates rule
+      //Future Boat Sizing
+    });
     return this.coordinates;
+  }
+  moveBoats(){
+    this.boats.forEach((boat) => {
+      let move = 1;
+      if (boat.orientation === 'horizontal') { //move one space right
+        setInterval(() => {
+          let coord = boat.coordinates[0];
+          this.grid[coord[0]][coord[1]] = "";
+          this.grid[coord[0]][coord[1]+ move] = "X";
+        }, 3000);
+      }
+    });
   }
 }
