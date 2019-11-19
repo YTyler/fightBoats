@@ -1,0 +1,8 @@
+#highSeas{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+}
+
+.space {
+background-image: url("https://media1.giphy.com/media/7GHRDluBmx9O8/giphy.gif");
+}
