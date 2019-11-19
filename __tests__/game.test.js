@@ -1,4 +1,4 @@
-import { Boat } from './../src/boat.js';
+// import { Boat } from './../src/boat.js';
 import { Game } from './../src/game.js';
 
 describe('Game', () => {
