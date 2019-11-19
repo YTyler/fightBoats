@@ -7,7 +7,7 @@ describe('Game', () => {
 
   beforeEach(function() {
     testGame = new Game();
-
+    testGame.placeBoats();
   });
 
   afterEach(function(){
@@ -21,7 +21,6 @@ describe('Game', () => {
 
 
   test('should successfully generate starting coordinates for 4 boats', () => {
-    testGame.placeBoats();
     for(let i = 0; i< testGame.boats.length; i++){
       expect(testGame.boats[i].coordinates[0][0]).toBeLessThan(9);
       expect(testGame.boats[i].coordinates[0][0]).toBeGreaterThanOrEqual(0);
@@ -30,10 +29,11 @@ describe('Game', () => {
     }
   });
   test('should succesfully move boat one space to the right after 3 seconds', () => {
-
-
-      testGame.boats[0].coordinates[0][1] = 1;
+      // testGame.boats[0].coordinates[0][1] = 1;
+      console.log(testGame.boats[0].coordinates)
       testGame.moveBoats();
+      jest.advanceTimersByTime(3001);
+      console.log(testGame.boats[0].coordinates)
       expect(testGame.boats[0].coordinates[0][1]).toEqual(2);
   });
 });
