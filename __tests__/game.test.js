@@ -24,9 +24,9 @@ describe('Game', () => {
     testGame.placeBoats();
     for(let i = 0; i< testGame.boats.length; i++){
       expect(testGame.boats[i].coordinates[0][0]).toBeLessThan(9);
-      expect(testGame.boats[i].coordinates[0][0]).toBeGreaterThan(0);
+      expect(testGame.boats[i].coordinates[0][0]).toBeGreaterThanOrEqual(0);
       expect(testGame.boats[i].coordinates[0][1]).toBeLessThan(9);
-      expect(testGame.boats[i].coordinates[0][1]).toBeGreaterThan(0);
+      expect(testGame.boats[i].coordinates[0][1]).toBeGreaterThanOrEqual(0);
     }
   });
   test('should succesfully move boat one space to the right after 3 seconds', () => {
