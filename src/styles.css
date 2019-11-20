@@ -1,8 +1,43 @@
 #highSeas{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  border-style:inset;
+  border-color: aqua;
+  border-width:thick;
+
 }
 
 .space {
-background-image: url("https://media1.giphy.com/media/7GHRDluBmx9O8/giphy.gif");
+background:  url('https://www.textures.com/system/gallery/photos/FX/Water/Plain/50937/WaterPlain0012_1_600.jpg?v=5');
+background-size: 101%;
+background-repeat: no-repeat;
+/* background-position: center; */
+}
+
+.boat {
+  background: url('https://www.textures.com/system/gallery/photos/FX/Water/Plain/50937/WaterPlain0012_1_600.jpg?v=5'),
+  url("https://png2.cleanpng.com/sh/2b7433b1e93a2c3a70cc764d11466b0d/L0KzQYm3U8MyN5Z1iZH0aYP2gLBuTgBqepJ5fZ98aHnzPbP2ggQueJp3edVELYDsgrL7hb10cJp1RadqY0C0doK4UPQ1PWY2RqY5OEi1SYe3UcUzOmY5SKU5NUC4RIW1kP5o/kisspng-pirate-ship-boat-piracy-pirate-ship-5ac01f110d4551.4088296015225403050544.png");
+  background-blend-mode: overlay;
+  background-size: 101%;
+  background-repeat: no-repeat;
+  background-position: center ;
+
+}
+
+.showChuck {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  font-family: cursive;
+  text-align: center;
+  text-decoration-style: wavy;
+  text-decoration: underline;
+
 }

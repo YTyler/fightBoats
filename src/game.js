@@ -13,7 +13,17 @@ export class Game {
       ['','','','','','','','','',],
       ['','','','','','','','','',]];
 
-    this.boats = [new Boat(3,'horizontal'),new Boat(3,'vertical'), new Boat(2,'horizontal'), new Boat(2,'vertical')];
+    this.currentPlayer = ((Math.random() > 0.5) ? "Pirate" : "Tusken Raider");
+    this.turnNumber = 0;
+    this.boats = [new Boat(3,'horizontal'),new Boat(3,'vertical'), new Boat(2,'horizontal'), new Boat(2,'vertical'),new Boat(3,'horizontal'),new Boat(3,'horizontal'),new Boat(3,'horizontal'),new Boat(3,'horizontal')];
+    this.points = [0,0];
+  }
+
+  advanceTurn(){
+    this.turnNumber+=1;
+    this.currentPlayer = ((this.currentPlayer === "Pirate") ? "Tusken Raider" : "Pirate");
+
+
   }
   placeBoats(){ //put boats onto grid
     this.boats.forEach((boat) => {
@@ -67,7 +77,7 @@ export class Game {
             return;
           }
         }
-      }, 3000);
+      }, 750);
 
     });
   }
